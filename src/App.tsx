@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, IonSplitPane } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
@@ -47,20 +47,28 @@ const appPages: AppPage[] = [
   }
 ];
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonSplitPane contentId="main">
-        <Menu appPages={appPages} />
-        <IonRouterOutlet id="main">
-          <Route path="/home" component={Home} exact={true} />
-          <Route path="/home/list" component={List} exact={true} />
-          <Route path="/map" component={Map} exact={true} />
-          <Route exact path="/" render={() => <Redirect to="/home" />} />
-        </IonRouterOutlet>
-      </IonSplitPane>
-    </IonReactRouter>
-  </IonApp>
-);
+const App: React.FC = () => {
+
+  //temp react hook store
+  const [store, setStore] = useState(0);
+
+  useEffect(() => console.log('hi'));
+
+  return(
+    <IonApp>
+      <IonReactRouter>
+        <IonSplitPane contentId="main">
+          <Menu appPages={appPages} />
+          <IonRouterOutlet id="main">
+            <Route path="/home" component={Home} exact={true} />
+            <Route path="/home/list" component={List} exact={true} />
+            <Route path="/map" component={Map} exact={true} />
+            <Route exact path="/" render={() => <Redirect to="/home" />} />
+          </IonRouterOutlet>
+        </IonSplitPane>
+      </IonReactRouter>
+    </IonApp>
+  )
+};
 
 export default App;

@@ -2,3 +2,33 @@
   max-height: 35vh;
   overflow: hidden;
 }
+
+.all-content {
+  padding: 2em;
+  text-transform: none !important;
+}
+
+.logo-img{
+  width: 60%;
+  margin: 2em auto;
+}
+
+.css-1wa3eu0-placeholder {
+  color: #fff !important;
+}
+
+.css-yk16xz-control{
+  color: #fff !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border-color: #fff !important;
+}
+
+.css-2b097c-container{
+  background-color: rgba(0,0,0,0) !important;
+  color: #fff !important;
+  margin-bottom: 1.5em !important;
+}
+
+.item-interactive.item-datetime.item-has-placeholder.item-label.item.ios.ion-activatable.ion-focusable.hydrated{
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
