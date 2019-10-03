@@ -13,6 +13,8 @@ import {
 import React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import { AppPage } from '../declarations';
+import './Menu.css';
+
 
 interface MenuProps extends RouteComponentProps {
   appPages: AppPage[];
@@ -26,6 +28,7 @@ const Menu: React.FunctionComponent<MenuProps> = ({ appPages }) => (
       </IonToolbar>
     </IonHeader>
     <IonContent>
+      <img src="https://images.dog.ceo/breeds/dingo/n02115641_10992.jpg" />
       <IonList>
         {appPages.map((appPage, index) => {
           return (
