@@ -32,30 +32,35 @@ const HomePage: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader>
+      {/* <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
           <IonTitle>Dog Diligence</IonTitle>
         </IonToolbar>
-      </IonHeader>
+      </IonHeader> */}
       <IonContent fullscreen>
+        <div className="all-content">
+        <div className="logo-img">
+          <img src="assets/logo.png"/>
+        </div>
         {/* <IonCard> */}
         {/* <img src="" /> */}
-        <IonCardSubtitle>Breed:</IonCardSubtitle>
+        <IonCardSubtitle>What is your dog's breed? If you have a mix, list all the breed types.</IonCardSubtitle>
           <Select
             placeholder={"Select Your Dog"}
             onChange={ionChange}
             options={options}
           />
         {/* </IonCard> */}
-        Birthday:
+        <IonCardSubtitle>Enter the birthdate of your dog.</IonCardSubtitle>
         <IonItem>
           <IonLabel>MM DD YY</IonLabel>
           <IonDatetime displayFormat="MMMM DD YYYY" placeholder="Select Date"></IonDatetime>
         </IonItem>
         <IonButton expand="block">Submit</IonButton>
+        </div>
       </IonContent>
     </IonPage>
   );
