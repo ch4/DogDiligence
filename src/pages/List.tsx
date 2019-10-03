@@ -59,7 +59,7 @@ const ListItems = () => {
 
   const items = [1, 2, 3, 4].map(x => {
     return (
-      <IonItem key={x}>
+      <IonItem key={x} routerLink="/information">
         <IonIcon icon={icons[x - 1]} slot="start" />
         Dog HIV {x}
         <div className="item-note" slot="end">
