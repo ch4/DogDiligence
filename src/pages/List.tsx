@@ -1,4 +1,4 @@
-import { IonButtons, IonContent, IonHeader, IonIcon, IonItem, IonList, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButtons, IonContent, IonCard, IonCardHeader, IonCardSubtitle,IonCardTitle, IonCardContent, IonHeader, IonIcon, IonItem, IonList, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import { americanFootball, basketball, beer, bluetooth, boat, build, flask, football, paperPlane, wifi } from 'ionicons/icons';
 import React from 'react';
 
@@ -15,8 +15,30 @@ const ListPage: React.FC = () => {
       </IonHeader>
 
       <IonContent>
-        <ListItems />
+        <IonCard>
+          <IonCardHeader>
+            <IonCardTitle>Screen Immediately</IonCardTitle>
+            <IonCardSubtitle>At your soonest convenience, please talk to your vet about the following:</IonCardSubtitle>
+          </IonCardHeader>
+
+          <IonCardContent>
+            <ListItems />
+          </IonCardContent>
+        </IonCard>
+
+        <IonCard>
+          <IonCardHeader>
+            <IonCardTitle>Screen Later</IonCardTitle>
+            <IonCardSubtitle>See your doctor about this within the next 3 years:</IonCardSubtitle>
+          </IonCardHeader>
+
+          <IonCardContent>
+            <ListItems />
+          </IonCardContent>
+        </IonCard>
       </IonContent>
+
+
     </IonPage>
   );
 };
@@ -35,13 +57,14 @@ const ListItems = () => {
     build
   ];
 
-  const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(x => {
+  const items = [1, 2, 3, 4].map(x => {
     return (
       <IonItem key={x}>
         <IonIcon icon={icons[x - 1]} slot="start" />
-        Item {x}
+        Dog HIV {x}
         <div className="item-note" slot="end">
-          This is item # {x}
+          {/* This is item # {x} */}
+          Dog HIV is caused by...
         </div>
       </IonItem>
     );

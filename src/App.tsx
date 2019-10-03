@@ -28,6 +28,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import { string } from 'prop-types';
 
 const appPages: AppPage[] = [
   {
@@ -50,7 +51,15 @@ const appPages: AppPage[] = [
 const App: React.FC = () => {
 
   //temp react hook store
-  const [store, setStore] = useState(0);
+  const [store, setStore] = useState({});
+  const [route, setRoute] = useState(null);
+  // schema
+  /*{
+    breed: string, 
+    picture: string, //url
+    disorders: [...string]
+    myClinics: string
+  }*/
 
   useEffect(() => console.log('hi'));
 

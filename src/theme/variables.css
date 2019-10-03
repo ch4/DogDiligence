@@ -91,3 +91,10 @@ ion-button{
   margin: 1em auto;
   color: #515151;
 }
+
+
+
+
+ion-card-title {
+  color: white;
+}

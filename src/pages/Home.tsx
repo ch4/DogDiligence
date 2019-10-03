@@ -22,6 +22,7 @@ import {
   } from '@ionic/react';
 import { book, build, colorFill, grid } from 'ionicons/icons';
 import React from 'react';
+import { RouteComponentProps, withRouter } from 'react-router-dom';
 import Select from 'react-select';
 import DogList from '../dataset/dogceo.json'
 import './Home.css';
@@ -40,6 +41,7 @@ const HomePage: React.FC = () => {
           <IonTitle>Dog Diligence</IonTitle>
         </IonToolbar>
       </IonHeader> */}
+      
       <IonContent fullscreen>
         <div className="all-content">
         <div className="logo-img">
@@ -57,15 +59,22 @@ const HomePage: React.FC = () => {
         <IonCardSubtitle>Enter the birthdate of your dog.</IonCardSubtitle>
         <IonItem>
           <IonLabel>MM DD YY</IonLabel>
-          <IonDatetime displayFormat="MMMM DD YYYY" placeholder="Select Date"></IonDatetime>
+          <div id="datePicker">  
+          < IonDatetime displayFormat="MMMM DD YYYY" placeholder="Select Date">
+          </IonDatetime>
+          </div>
         </IonItem>
-        <IonButton expand="block">Submit</IonButton>
+        <IonButton expand="block" routerLink="/home/list" onChange={()=>submit()}>Submit</IonButton>
         </div>
       </IonContent>
     </IonPage>
   );
 };
 
+let submit= () => {
+   //information about dog
+
+}
 
 let ionChange = () => {
   console.log('changed')
