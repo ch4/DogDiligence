@@ -9,7 +9,8 @@ import Home from './pages/Home';
 import List from './pages/List';
 import Information from './pages/Information';
 import Map from './pages/Map';
-import { home, list, map, information } from 'ionicons/icons';
+import Finance from './pages/Finance';
+import { home, list, map, information, cash } from 'ionicons/icons';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -48,6 +49,11 @@ const appPages: AppPage[] = [
     icon: map
   }, 
   {
+    title: 'Finances',
+    url: '/finance',
+    icon: cash
+  }, 
+  {
     title: "More Info",
     url: 'moreInfo',
     icon: information
@@ -83,6 +89,7 @@ const App: React.FC = () => {
             <Route path="/home/list" component={List} exact={true} />
             <Route path="/information" component={Information} exact={true} />
             <Route path="/map" component={Map} exact={true} />
+            <Route path="/finance" component={Finance} exact={true} />
 
             <Route exact path="/" render={() => <Redirect to="/home" />} />
           </IonRouterOutlet>

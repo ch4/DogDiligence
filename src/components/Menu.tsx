@@ -28,7 +28,9 @@ const Menu: React.FunctionComponent<MenuProps> = ({ appPages }) => (
       </IonToolbar>
     </IonHeader>
     <IonContent>
-      <img src="https://images.dog.ceo/breeds/dingo/n02115641_10992.jpg" />
+      <div className="profile-border">
+    <div className="user-pic one"></div>
+      </div>
       <IonList>
         {appPages.map((appPage, index) => {
           //clear disease
