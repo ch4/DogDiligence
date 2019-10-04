@@ -36,7 +36,9 @@ import {
           </IonToolbar>
         </IonHeader>
         <IonContent>
-            <div id="map_canvas"></div>
+            <div id="map_canvas">
+              <img src="../../assets/map.jpg"></img>
+            </div>
         </IonContent>
       </IonPage>
     );
