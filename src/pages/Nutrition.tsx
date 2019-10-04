@@ -20,7 +20,8 @@ import {
     IonToolbar,
     IonSearchbar,
     IonDatetime,
-    IonButton
+    IonButton,
+    IonNote
 } from '@ionic/react'
 import { book, build, colorFill, grid } from 'ionicons/icons'
 import NutritionData from './../dataset/nutrition.json'
@@ -42,7 +43,8 @@ const Nutrition: React.FC = () => (
       <IonList>
         {NutritionData.slice(limit*page, limit*(page+1)).map(({data: {calories, name, packaging }, id}, key) => {
           return <IonItem key={key}>
-            {name}
+            <IonLabel>{name}</IonLabel>
+            <IonNote slot="end">Calories: {calories}</IonNote>
           </IonItem>
         })}
       </IonList>
