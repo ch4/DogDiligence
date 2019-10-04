@@ -25,6 +25,9 @@ import {
 import { book, build, colorFill, grid } from 'ionicons/icons'
 import NutritionData from './../dataset/nutrition.json'
 
+const limit = 100
+let page = 0
+
 const Nutrition: React.FC = () => (
   <IonPage>
     <IonHeader>
@@ -37,9 +40,8 @@ const Nutrition: React.FC = () => (
     </IonHeader>
     <IonContent>
       <IonList>
-        {NutritionData.map(({data: {calories, name, packaging }, id}, key) => {
+        {NutritionData.slice(limit*page, limit*(page+1)).map(({data: {calories, name, packaging }, id}, key) => {
           return <IonItem key={key}>
-            {console.log(key)}
             {name}
           </IonItem>
         })}
