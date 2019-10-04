@@ -66,8 +66,8 @@ const appPages: AppPage[] = [
   }
 ];
 
-// clear local storage on first launch
-window.localStorage.clear();
+// // clear local storage on first launch
+// window.localStorage.clear();
 
 
 const App: React.FC = () => {
