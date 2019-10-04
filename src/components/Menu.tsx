@@ -31,6 +31,8 @@ const Menu: React.FunctionComponent<MenuProps> = ({ appPages }) => (
       <img src="https://images.dog.ceo/breeds/dingo/n02115641_10992.jpg" />
       <IonList>
         {appPages.map((appPage, index) => {
+          //clear disease
+          // window.localStorage.removeItem('disease');
           return (
             <IonMenuToggle key={index} autoHide={false}>
               <IonItem routerLink={appPage.url} routerDirection="none">

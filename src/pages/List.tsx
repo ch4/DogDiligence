@@ -67,8 +67,7 @@ const ListItems = () => {
   let items = disordersArr.map((x: any,i: any) => {
     return (
       <IonItem key={i} routerLink="/information">
-
-        <div className="item-note">
+        <div className="item-note" onClick={(e) => itemClick(e)}>
           {x}
         </div>
       </IonItem>
@@ -79,6 +78,13 @@ const ListItems = () => {
   return <IonList>{items}</IonList>;
 };
 
+
+function itemClick(e: any){
+  if(e && e.target && e.target.textContent){
+    window.localStorage.setItem('disease', e.target.textContent);
+
+  }
+}
 
 const GeneralItems = () => {
 
