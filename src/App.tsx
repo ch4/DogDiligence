@@ -10,7 +10,7 @@ import List from './pages/List';
 import Information from './pages/Information';
 import Map from './pages/Map';
 import Finance from './pages/Finance';
-import { home, list, map, information, cash } from 'ionicons/icons';
+import { home, list, map, information, cash, nutrition } from 'ionicons/icons';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -39,7 +39,7 @@ const appPages: AppPage[] = [
     icon: home
   },
   {
-    title: 'List',
+    title: 'Screenings',
     url: '/home/list',
     icon: list
   },
@@ -47,12 +47,17 @@ const appPages: AppPage[] = [
     title: 'Map',
     url: '/map',
     icon: map
-  }, 
+  },
   {
     title: 'Finances',
     url: '/finance',
     icon: cash
-  }, 
+  },
+  {
+    title: 'Nutrition',
+    url: '/nutrition',
+    icon: nutrition
+  },
   {
     title: "More Info",
     url: 'moreInfo',
@@ -71,7 +76,7 @@ const App: React.FC = () => {
   const [route, setRoute] = useState(null);
   // schema
   /*{
-    breed: string, 
+    breed: string,
     picture: string, //url
     disorders: [...string]
     myClinics: string
