@@ -1,3 +1,5 @@
+import './Home.css'
+import React from 'react'
 import {
     IonButtons,
     IonCard,
@@ -19,29 +21,32 @@ import {
     IonSearchbar,
     IonDatetime,
     IonButton
-} from '@ionic/react';
+} from '@ionic/react'
+import { book, build, colorFill, grid } from 'ionicons/icons'
+import NutritionData from './../dataset/nutrition.json'
 
-import { book, build, colorFill, grid } from 'ionicons/icons';
-import React from 'react';
-import './Home.css';
+const Nutrition: React.FC = () => (
+  <IonPage>
+    <IonHeader>
+      <IonToolbar>
+        <IonButtons slot="start">
+          <IonMenuButton />
+        </IonButtons>
+        <IonTitle>Nutrition</IonTitle>
+      </IonToolbar>
+    </IonHeader>
+    <IonContent>
+      <IonList>
+        {NutritionData.map(({data: {calories, name, packaging }, id}, key) => {
+          return <IonItem key={key}>
+            {console.log(key)}
+            {name}
+          </IonItem>
+        })}
+      </IonList>
+    </IonContent>
+  </IonPage>
+)
 
-const Nutrition: React.FC = () => {
-  return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonButtons slot="start">
-            <IonMenuButton />
-          </IonButtons>
-          <IonTitle>Nutrition</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent>
-          <div id="map_canvas"></div>
-      </IonContent>
-    </IonPage>
-  );
-};
-
-export default Nutrition;
+export default Nutrition
 

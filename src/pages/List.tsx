@@ -46,8 +46,6 @@ const ListPage: React.FC = () => {
           </div>
         </div>
       </IonContent>
-
-
     </IonPage>
   );
 };
@@ -93,7 +91,6 @@ const GeneralItems = () => {
   let items = disordersArr.map((x,i) => {
     return (
       <IonItem key={i} routerLink="/information">
-
         <div className="item-note">
           {x}
         </div>
