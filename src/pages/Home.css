@@ -32,3 +32,22 @@
 .item-interactive.item-datetime.item-has-placeholder.item-label.item.ios.ion-activatable.ion-focusable.hydrated{
   background-color: rgba(255, 255, 255, 0.2) !important;
 }
+
+.home-content{
+  /*background: url(../images/home-bg.jpg) no-repeat center/cover fixed;*/
+}
+
+.list-content{
+  height: 1000px;
+  padding: 1em;
+  background-color: #d9d0c3;
+  /*background: url(../images/list-bg.jpg) no-repeat center/cover fixed;*/
+}
+
+.info-content{
+  height: 100%;
+  padding: 1em;
+  background-color: #d9d0c3;
+  /*background: url(../images/list-bg.jpg) no-repeat center/cover fixed;*/
+}
+

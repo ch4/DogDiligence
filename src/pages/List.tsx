@@ -15,10 +15,11 @@ const ListPage: React.FC = () => {
       </IonHeader>
 
       <IonContent>
+        <div className="list-content">
         <IonCard>
           <IonCardHeader>
-            <IonCardTitle>Screen Immediately</IonCardTitle>
-            <IonCardSubtitle>At your soonest convenience, please talk to your vet about the following:</IonCardSubtitle>
+            <IonCardTitle>Breed Screening</IonCardTitle>
+            <IonCardSubtitle>-Breed- dogs are recommended to be screened for the disorders below to maintain their quality of life.</IonCardSubtitle>
           </IonCardHeader>
 
           <IonCardContent>
@@ -28,14 +29,18 @@ const ListPage: React.FC = () => {
 
         <IonCard>
           <IonCardHeader>
-            <IonCardTitle>Screen Later</IonCardTitle>
-            <IonCardSubtitle>See your doctor about this within the next 3 years:</IonCardSubtitle>
+            <IonCardTitle>General Screening</IonCardTitle>
+            <IonCardSubtitle>Good for dogs of all breeds.</IonCardSubtitle>
           </IonCardHeader>
 
           <IonCardContent>
             <ListItems />
           </IonCardContent>
         </IonCard>
+        <div>
+            <img src="assets/report.png"/>
+          </div>
+        </div>
       </IonContent>
 
 
@@ -57,10 +62,10 @@ const ListItems = () => {
     build
   ];
 
-  const items = [1, 2, 3, 4].map(x => {
+  const items = [1, 2].map(x => {
     return (
       <IonItem key={x} routerLink="/information">
-        <IonIcon icon={icons[x - 1]} slot="start" />
+        {/* <IonIcon icon={icons[x - 1]} slot="start" /> */}
         Dog HIV {x}
         <div className="item-note" slot="end">
           {/* This is item # {x} */}

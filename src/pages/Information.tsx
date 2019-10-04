@@ -15,28 +15,40 @@ const InformationPage: React.FC = () => {
       </IonHeader>
 
       <IonContent>
-        <IonCard>
-          <IonCardHeader>
-            <IonCardTitle>DISEASE A</IonCardTitle>
-            <IonCardSubtitle>OMG YOUR DOG IS GOING TO DIE...</IonCardSubtitle>
-          </IonCardHeader>
+        <div className="info-content">
+          <IonCard>
+            <IonCardHeader>
+              <IonCardTitle>DISEASE A</IonCardTitle>
+              {/* <IonCardSubtitle>OMG YOUR DOG IS GOING TO DIE...</IonCardSubtitle> */}
+            </IonCardHeader>
 
-          <IonCardContent>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-          </IonCardContent>
+            <IonCardContent>
+            Degenerative myelopathy (DM) is a relatively uncommon neurological disease characterized by progressive weakness and loss of normal function in the hind limbs of affected dogs. In DM, the loss of myelin (the tissue surrounding the nerves) and the degeneration of axons (nerve endings) leads to the symptoms seen in this disease. Ultimately, the origin of these symptoms is unknown but a genetic predisposition is assumed. An aberrant immune response may be responsible but is as yet merely hypothesized. The mode of inheritance is also unknown.
+            </IonCardContent>
 
-            <IonList>
-                <IonItem>
-                    <IonLabel>Set Reminder to see Doctor at 2/4/20?</IonLabel>
-                    <IonToggle value="pepperoni" color="danger" onChange={() => {}} />
-                </IonItem>
-                <IonItem>
-                    <IonButton expand="block" color="success" routerLink="/map">Find Vet Nearby</IonButton>
-                </IonItem>
-            </IonList>
+            <IonCardContent>
+              <div>
+                <span><strong>Treatment Cost: </strong></span>
+                <span>$2000</span>
+              </div>
+            </IonCardContent>
 
-        </IonCard>
+              <IonList>
+                  <IonItem>
+                      <IonLabel>Set Reminder to see Doctor at 2/4/20?</IonLabel>
+                      <IonToggle value="pepperoni" color="danger" onChange={() => {}} />
+                  </IonItem>
+                  <IonItem>
+                      <IonButton expand="block" color="success" routerLink="/map">Plan Payment</IonButton>
+                      <IonButton expand="block" color="success" routerLink="/map">Find Vet Nearby</IonButton>
+                  </IonItem>
+              </IonList>
 
+          </IonCard>
+          <div style={{position: 'fixed', bottom: '0'}}>
+            <img src="assets/steth.png"/>
+          </div>
+        </div>
       </IonContent>
 
 
