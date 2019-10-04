@@ -10,6 +10,7 @@ import List from './pages/List';
 import Information from './pages/Information';
 import Map from './pages/Map';
 import Finance from './pages/Finance';
+import Nutrition from './pages/Nutrition';
 import { home, list, map, information, cash, nutrition } from 'ionicons/icons';
 
 /* Core CSS required for Ionic components to work properly */
@@ -95,6 +96,7 @@ const App: React.FC = () => {
             <Route path="/information" component={Information} exact={true} />
             <Route path="/map" component={Map} exact={true} />
             <Route path="/finance" component={Finance} exact={true} />
+            <Route path="/nutrition" component={Nutrition} exact={true} />
 
             <Route exact path="/" render={() => <Redirect to="/home" />} />
           </IonRouterOutlet>
