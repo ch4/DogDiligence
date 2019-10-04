@@ -38,12 +38,12 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-warning-shade: #e0b500;
   --ion-color-warning-tint: #ffd31a;
 
-  --ion-color-danger: #f04141;
-  --ion-color-danger-rgb: 245,61,61;
+  --ion-color-danger: #7f5a4f;
+  --ion-color-danger-rgb: 127,90,79;
   --ion-color-danger-contrast: #ffffff;
   --ion-color-danger-contrast-rgb: 255,255,255;
-  --ion-color-danger-shade: #d33939;
-  --ion-color-danger-tint: #f25454;
+  --ion-color-danger-shade: #704f46;
+  --ion-color-danger-tint: #8c6b61;
 
   --ion-color-dark: #222428;
   --ion-color-dark-rgb: 34,34,34;
@@ -65,6 +65,10 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-light-contrast-rgb: 0,0,0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+}
+
+ion-header{
+  --background-color: var(--ion-color-primary);
 }
 
 ion-content {
@@ -102,13 +106,20 @@ ion-item{
 
 ion-card-content{
   --background-color: rgba(0, 0, 0, 0.3) !important;
+  padding: 0;
 }
 
 .info_buttons{
-  margin: 0 0.5em;
+  margin: .7em 0.5em;
+  width: 45%;
+    font-size: 1em;
+    height: 35px;
+    font-weight: 700;
 }
 
-
+.toolbar-background{
+  background-color: blue;
+}
 
 ion-card-title {
   color: white;

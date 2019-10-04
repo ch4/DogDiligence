@@ -22,19 +22,23 @@ interface MenuProps extends RouteComponentProps {
 
 const Menu: React.FunctionComponent<MenuProps> = ({ appPages }) => (
   <IonMenu contentId="main" type="overlay">
-    <IonHeader>
+    {/* <IonHeader>
       <IonToolbar>
         <IonTitle>Dog Diligence</IonTitle>
       </IonToolbar>
-    </IonHeader>
+    </IonHeader> */}
     <IonContent>
-      <IonList>
+      <div id="menu-content" >
+      {/* <div className="profile-border">
+    <div className="user-pic one"></div>
+      </div> */}
+      <IonList style={{backgroundColor: '#000'}}>
         {appPages.map((appPage, index) => {
           //clear disease
           // window.localStorage.removeItem('disease');
           return (
             <IonMenuToggle key={index} autoHide={false}>
-              <IonItem routerLink={appPage.url} routerDirection="none">
+              <IonItem style={{backgroundColor: '#433E3F'}} routerLink={appPage.url} routerDirection="none">
                 <IonIcon slot="start" icon={appPage.icon} />
                 <IonLabel>{appPage.title}</IonLabel>
               </IonItem>
@@ -42,6 +46,7 @@ const Menu: React.FunctionComponent<MenuProps> = ({ appPages }) => (
           );
         })}
       </IonList>
+      </div>
     </IonContent>
   </IonMenu>
 );

@@ -9,12 +9,12 @@ const ListPage: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader>
+      <IonHeader class="header-list">
         <IonToolbar>
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
-          <IonTitle>{breed} {mixed === 'true' ? 'mixed' : ""} dog care</IonTitle>
+          <IonTitle>{breed} {mixed === "true" ? 'mixed' : ""} Dog Care</IonTitle>
         </IonToolbar>
       </IonHeader>
 
@@ -22,6 +22,9 @@ const ListPage: React.FC = () => {
         <div className="list-content">
         <IonCard>
           <IonCardHeader>
+          <div>
+                <img src="assets/folders.png"/>
+              </div>
             <IonCardTitle>Breed Screening</IonCardTitle>
             <IonCardSubtitle>-Breed- dogs are recommended to be screened for the disorders below to maintain their quality of life.</IonCardSubtitle>
           </IonCardHeader>
@@ -33,7 +36,10 @@ const ListPage: React.FC = () => {
 
         <IonCard>
           <IonCardHeader>
-            <IonCardTitle>General Screening</IonCardTitle>
+              <div>
+                <img src="assets/report.png"/>
+              </div>
+              <IonCardTitle>General Screening</IonCardTitle>
             <IonCardSubtitle>Good for dogs of all breeds.</IonCardSubtitle>
           </IonCardHeader>
 
@@ -41,9 +47,7 @@ const ListPage: React.FC = () => {
             <GeneralItems />
           </IonCardContent>
         </IonCard>
-        <div>
-            <img src="assets/report.png"/>
-          </div>
+        
         </div>
       </IonContent>
     </IonPage>

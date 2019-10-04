@@ -177,6 +177,7 @@ var data = [
             </IonToolbar> */}
         </IonHeader>
         <IonContent>
+            <div>
             <div id="chart">
             <AreaChart
                 data={data}
@@ -187,7 +188,7 @@ var data = [
                 tooltipHtml={tooltipArea}
                 />
             </div>
-
+            </div>
         </IonContent>
         </IonPage>
     );
