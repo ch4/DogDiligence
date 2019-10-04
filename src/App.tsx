@@ -11,6 +11,9 @@ import Information from './pages/Information';
 import Map from './pages/Map';
 import { home, list, map, information } from 'ionicons/icons';
 
+import { Provider } from 'mobx-react';
+import stores from './stores'
+
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -46,7 +49,7 @@ const appPages: AppPage[] = [
     title: 'Map',
     url: '/map',
     icon: map
-  }, 
+  },
   {
     title: "More Info",
     url: 'moreInfo',
@@ -61,7 +64,7 @@ const App: React.FC = () => {
   const [route, setRoute] = useState(null);
   // schema
   /*{
-    breed: string, 
+    breed: string,
     picture: string, //url
     disorders: [...string]
     myClinics: string
@@ -74,14 +77,16 @@ const App: React.FC = () => {
       <IonReactRouter>
         <IonSplitPane contentId="main">
           <Menu appPages={appPages} />
-          <IonRouterOutlet id="main">
-            <Route path="/home" component={Home} exact={true} />
-            <Route path="/home/list" component={List} exact={true} />
-            <Route path="/information" component={Information} exact={true} />
-            <Route path="/map" component={Map} exact={true} />
+          <Provider {...stores}>
+            <IonRouterOutlet id="main">
+              <Route path="/home" component={Home} exact={true} />
+              <Route path="/home/list" component={List} exact={true} />
+              <Route path="/information" component={Information} exact={true} />
+              <Route path="/map" component={Map} exact={true} />
 
-            <Route exact path="/" render={() => <Redirect to="/home" />} />
-          </IonRouterOutlet>
+              <Route exact path="/" render={() => <Redirect to="/home" />} />
+            </IonRouterOutlet>
+          </Provider>
         </IonSplitPane>
       </IonReactRouter>
     </IonApp>

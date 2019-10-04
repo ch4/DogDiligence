@@ -23,16 +23,27 @@ import {
 import { book, build, colorFill, grid } from 'ionicons/icons';
 import React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
+import { observer, inject } from 'mobx-react';
 import Select from 'react-select';
 import DogList from '../dataset/dogceo.json'
 import './Home.css';
 
+import { RouterStore } from 'mobx-react-router'
+interface Props {
+  UserStore?: RouterStore
+}
 
 const options = DogList.dogs.map((name) => {return {'value': name, 'label': name}})
-const HomePage: React.FC = () => {
 
-  return (
-    <IonPage>
+
+@inject('UserStore')
+@observer
+class HomePage extends React.Component<Props> {
+  render () {
+    const user = this.props.UserStore
+    console.log(1, user)
+
+    return <IonPage>
       {/* <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
@@ -41,7 +52,7 @@ const HomePage: React.FC = () => {
           <IonTitle>Dog Diligence</IonTitle>
         </IonToolbar>
       </IonHeader> */}
-      
+
       <IonContent fullscreen>
         <div className="home-content">
           <div className="all-content">
@@ -60,7 +71,7 @@ const HomePage: React.FC = () => {
           <IonCardSubtitle>Enter the birthdate of your dog.</IonCardSubtitle>
           <IonItem>
             <IonLabel>MM DD YY</IonLabel>
-            <div id="datePicker">  
+            <div id="datePicker">
             < IonDatetime displayFormat="MMMM DD YYYY" placeholder="Select Date">
             </IonDatetime>
             </div>
@@ -70,7 +81,7 @@ const HomePage: React.FC = () => {
         </div>
       </IonContent>
     </IonPage>
-  );
+  }
 };
 
 let submit= () => {
@@ -80,7 +91,7 @@ let submit= () => {
 
 let ionChange = () => {
   console.log('changed')
-  //save dog to state. 
+  //save dog to state.
 }
 
 export default HomePage;
