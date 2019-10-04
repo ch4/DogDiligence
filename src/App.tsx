@@ -11,7 +11,8 @@ import Information from './pages/Information';
 import Map from './pages/Map';
 import Finance from './pages/Finance';
 import Plaid from './pages/Plaid';
-import { home, list, map, information, cash } from 'ionicons/icons';
+import Nutrition from './pages/Nutrition';
+import { home, list, map, information, cash, nutrition } from 'ionicons/icons';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -40,7 +41,7 @@ const appPages: AppPage[] = [
     icon: home
   },
   {
-    title: 'List',
+    title: 'Screenings',
     url: '/home/list',
     icon: list
   },
@@ -48,12 +49,17 @@ const appPages: AppPage[] = [
     title: 'Map',
     url: '/map',
     icon: map
-  }, 
+  },
   {
     title: 'Finances',
     url: '/plaid',
     icon: cash
-  }, 
+  },
+  {
+    title: 'Nutrition',
+    url: '/nutrition',
+    icon: nutrition
+  },
   {
     title: "More Info",
     url: 'moreInfo',
@@ -61,8 +67,8 @@ const appPages: AppPage[] = [
   }
 ];
 
-// clear local storage on first launch
-window.localStorage.clear();
+// // clear local storage on first launch
+// window.localStorage.clear();
 
 
 const App: React.FC = () => {
@@ -72,7 +78,7 @@ const App: React.FC = () => {
   const [route, setRoute] = useState(null);
   // schema
   /*{
-    breed: string, 
+    breed: string,
     picture: string, //url
     disorders: [...string]
     myClinics: string
@@ -91,6 +97,7 @@ const App: React.FC = () => {
             <Route path="/information" component={Information} exact={true} />
             <Route path="/map" component={Map} exact={true} />
             <Route path="/finance" component={Finance} exact={true} />
+            <Route path="/nutrition" component={Nutrition} exact={true} />
             <Route path="/plaid" component={Plaid} exact={true} />
 
             <Route exact path="/" render={() => <Redirect to="/home" />} />

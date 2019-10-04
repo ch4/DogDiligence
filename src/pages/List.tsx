@@ -14,7 +14,7 @@ const ListPage: React.FC = () => {
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
-          <IonTitle>{breed} {mixed === "true" ? 'mixed' : ""} dog care</IonTitle>
+          <IonTitle>{breed} {mixed === 'true' ? 'mixed' : ""} dog care</IonTitle>
         </IonToolbar>
       </IonHeader>
 
@@ -46,8 +46,6 @@ const ListPage: React.FC = () => {
           </div>
         </div>
       </IonContent>
-
-
     </IonPage>
   );
 };
@@ -60,7 +58,7 @@ const ListItems = () => {
 
   if(!disorders.dogs.hasOwnProperty(breedNoQuote ? breedNoQuote: "")){
     return(<div></div>)
-  } 
+  }
 
   let disordersObj: any = disorders.dogs
   let disordersArr: any = disordersObj[breedNoQuote]
@@ -73,7 +71,7 @@ const ListItems = () => {
       </IonItem>
     );
   });
-  
+
 
   return <IonList>{items}</IonList>;
 };
@@ -93,14 +91,13 @@ const GeneralItems = () => {
   let items = disordersArr.map((x,i) => {
     return (
       <IonItem key={i} routerLink="/information">
-
         <div className="item-note">
           {x}
         </div>
       </IonItem>
     );
   });
-  
+
 
   return <IonList>{items}</IonList>;
 };
