@@ -54,6 +54,10 @@ const appPages: AppPage[] = [
   }
 ];
 
+// clear local storage on first launch
+window.localStorage.clear();
+
+
 const App: React.FC = () => {
 
   //temp react hook store

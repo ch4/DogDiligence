@@ -35,7 +35,7 @@ const InformationPage: React.FC = () => {
 
               <IonList>
                   <IonItem>
-                      <IonLabel>Set Reminder to see Doctor at 2/4/20?</IonLabel>
+                      <IonLabel>Set Appointment at 2/4/20?</IonLabel>
                       <IonToggle value="pepperoni" color="danger" onChange={() => {}} />
                   </IonItem>
                   <IonItem>

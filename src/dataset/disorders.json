@@ -1,0 +1,20 @@
+{
+    "Dogs": {
+        "Welsh Corgi": {
+            "Disorder 1": "Degenerative Myelopathy",
+            "Disorder 2": ""
+        }, 
+        "Golden retriever": {
+            "Disorder 1": "Golden Retriever Ichthyosis",
+            "Disorder 2": ""
+        },
+        "French bulldog": {
+            "Disorder 1": "Degenerative Myelopathy",
+            "Disorder 2": "Cone Rod Dystrophy"
+        }, 
+        "Airedale Terrier": {
+            "Disorder 1": "Degenerative Myelopathy",
+            "Disorder 2": "Protein Losing Nephropathy"
+        }
+    }
+}

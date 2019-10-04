@@ -1,0 +1,24 @@
+{ 
+    "disorderInfo": {
+        "Degenerative Myelopathy": {
+            "Desc": "Degenerative myelopathy (DM) is a relatively uncommon neurological disease characterized by progressive weakness and loss of normal function in the hind limbs of affected dogs. In DM, the loss of myelin (the tissue surrounding the nerves) and the degeneration of axons (nerve endings) leads to the symptoms seen in this disease. Ultimately, the origin of these symptoms is unknown but a genetic predisposition is assumed. An aberrant immune response may be responsible but is as yet merely hypothesized. The mode of inheritance is also unknown.",
+            "Cost": 3000,
+            "Link": "http://www.caninegeneticdiseases.net/dm/basicdm.htm"
+        },
+        "Golden Retriever Ichthyosis": {
+            "Desc": "This disease can resemble many other skin conditions such as allergies, dermatitis, and localized reactions. It is most likely present at birth in your dog and can become painful if left untreated. Your dog may present with thickened pads of his paws, irritated, flaking skin and other symptoms. He may not itch or scab and it does have some differences from other common conditions. This disorder can cause water loss in your dog as his skin is unable to maintain moisture. Canine ichthyosis is also known as the “fish scale” disease. Your dog will have thickened skin with scaly and greasy patches and flakes.",
+            "Cost": 1200,
+            "Link": "https://www.pawprintgenetics.com/products/tests/details/18/?breed=75"
+        },
+        "Cone Rod Dystrophy": {
+            "Desc": "Progressive retinal Atrophy, cone-Rod dystrophy 1 is an inherited eye disease affecting dogs. Affected dogs typically have abnormal thinning and degeneration of the Retina by 11 weeks of age. Evidence of retinal thinning can be identified on a veterinary eye exam by 3 to 6 months of age. Vision is severely impaired by one year of age and by 20 months of age affected dogs have an advanced stage of retinal degeneration.",
+            "Cost": 1300,
+            "Link": "https://www.pawprintgenetics.com/products/tests/details/161/?breed=109"
+        },
+        "Protein Losing Nephropathy": {
+            "Desc": "The kidneys are a critical organ responsible for filtering many waste products out of the bloodstream. Occasionally, the kidneys can become damaged or inflamed as a result of diabetes, autoimmune disorders, or blood clots. This can interfere with their normal function, causing stones, bloody urine, or loss of blood components beyond the waste material. Protein-losing nephropathy is a specific kind of kidney ailment that usually affects large-breed dogs, leading to the seepage of protein and blood serum into the urine. This disease often goes undiagnosed and can lead to fatal end-stage kidney failure if not caught and treated promptly.",
+            "Cost": 1000,
+            "Link": "https://wagwalking.com/condition/protein-losing-nephropathy"
+        }
+    }
+}
