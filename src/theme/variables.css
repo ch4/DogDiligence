@@ -94,7 +94,7 @@ ion-item{
   padding-top: 5px;
   }
 
-ion-button{
+#homePageSubmit{
   width: 50%;
   margin: 1em auto;
   color: #515151;
@@ -104,7 +104,7 @@ ion-card-content{
   --background-color: rgba(0, 0, 0, 0.3) !important;
 }
 
-ion-button{
+.info_buttons{
   margin: 0 0.5em;
 }
 

@@ -39,8 +39,8 @@ const InformationPage: React.FC = () => {
                       <IonToggle value="pepperoni" color="danger" onChange={() => {}} />
                   </IonItem>
                   <IonItem>
-                      <IonButton expand="block" color="success" routerLink="/map">Plan Payment</IonButton>
-                      <IonButton expand="block" color="success" routerLink="/map">Find Vet Nearby</IonButton>
+                      <IonButton class="info_buttons" expand="block" color="success" routerLink="/map">Plan Payment</IonButton>
+                      <IonButton class="info_buttons" expand="block" color="success" routerLink="/map">Find Vet Nearby</IonButton>
                   </IonItem>
               </IonList>
 

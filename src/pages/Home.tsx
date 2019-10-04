@@ -65,7 +65,7 @@ const HomePage: React.FC = () => {
             </IonDatetime>
             </div>
           </IonItem>
-          <IonButton expand="block" routerLink="/home/list" onChange={()=>submit()}>Submit</IonButton>
+          <IonButton id="homePageSubmit" expand="block" routerLink="/home/list" onChange={()=>submit()}>Submit</IonButton>
           </div>
         </div>
       </IonContent>
