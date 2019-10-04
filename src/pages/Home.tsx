@@ -86,7 +86,10 @@ function timeChange(this: any) {
 }
 let ionChange = (val:any) => {
   let mainBreed = val && val[0] && val[0].value;
+  let mixed = val && Array.isArray(val) && val.length > 1;
   window.localStorage.setItem('breed', mainBreed ? JSON.stringify(mainBreed): "");
+  window.localStorage.setItem('mixed', JSON.stringify(mixed));
+
 
   //save dog to state. 
 }

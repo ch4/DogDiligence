@@ -2,7 +2,11 @@ import { IonButtons, IonContent, IonCard, IonCardHeader, IonCardSubtitle,IonCard
 import { americanFootball, basketball, beer, bluetooth, boat, build, flask, football, paperPlane, wifi } from 'ionicons/icons';
 import React from 'react';
 
+
+
 const ListPage: React.FC = () => {
+  let breed = window.localStorage.getItem('breed');
+  let mixed = window.localStorage.getItem('mixed');
   return (
     <IonPage>
       <IonHeader>
@@ -10,7 +14,7 @@ const ListPage: React.FC = () => {
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
-          <IonTitle>List</IonTitle>
+          <IonTitle>{breed} {mixed === "true" ? 'mixed' : ""} dog care</IonTitle>
         </IonToolbar>
       </IonHeader>
 
