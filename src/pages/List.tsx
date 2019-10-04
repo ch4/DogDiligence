@@ -1,12 +1,12 @@
 import { IonButtons, IonContent, IonCard, IonCardHeader, IonCardSubtitle,IonCardTitle, IonCardContent, IonHeader, IonIcon, IonItem, IonList, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import { americanFootball, basketball, beer, bluetooth, boat, build, flask, football, paperPlane, wifi } from 'ionicons/icons';
 import React from 'react';
-
-
+import disorders from './../dataset/disorders.json';
 
 const ListPage: React.FC = () => {
-  let breed = window.localStorage.getItem('breed');
+  let breed = window.localStorage.getItem('breed')
   let mixed = window.localStorage.getItem('mixed');
+
   return (
     <IonPage>
       <IonHeader>
@@ -38,7 +38,7 @@ const ListPage: React.FC = () => {
           </IonCardHeader>
 
           <IonCardContent>
-            <ListItems />
+            <GeneralItems />
           </IonCardContent>
         </IonCard>
         <div>
@@ -52,32 +52,49 @@ const ListPage: React.FC = () => {
   );
 };
 
-const ListItems = () => {
-  const icons = [
-    flask,
-    wifi,
-    beer,
-    football,
-    basketball,
-    paperPlane,
-    americanFootball,
-    boat,
-    bluetooth,
-    build
-  ];
 
-  const items = [1, 2].map(x => {
+const ListItems = () => {
+
+  let breed = window.localStorage.getItem('breed')
+  let breedNoQuote = breed ? JSON.parse(breed) : "";
+
+  if(!disorders.dogs.hasOwnProperty(breedNoQuote ? breedNoQuote: "")){
+    return(<div></div>)
+  } 
+
+  let disordersObj: any = disorders.dogs
+  let disordersArr: any = disordersObj[breedNoQuote]
+  let items = disordersArr.map((x: any,i: any) => {
     return (
-      <IonItem key={x} routerLink="/information">
-        {/* <IonIcon icon={icons[x - 1]} slot="start" /> */}
-        Dog HIV {x}
-        <div className="item-note" slot="end">
-          {/* This is item # {x} */}
-          Dog HIV is caused by...
+      <IonItem key={i} routerLink="/information">
+
+        <div className="item-note">
+          {x}
         </div>
       </IonItem>
     );
   });
+  
+
+  return <IonList>{items}</IonList>;
+};
+
+
+const GeneralItems = () => {
+
+  let disordersArr:Array<String> = ["Bordetella Bronchiseptica", "Canine Distemper", "Canine Hepatitis", "Canine Parainfluenza"]
+
+  let items = disordersArr.map((x,i) => {
+    return (
+      <IonItem key={i} routerLink="/information">
+
+        <div className="item-note">
+          {x}
+        </div>
+      </IonItem>
+    );
+  });
+  
 
   return <IonList>{items}</IonList>;
 };
