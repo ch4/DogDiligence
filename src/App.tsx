@@ -10,6 +10,7 @@ import List from './pages/List';
 import Information from './pages/Information';
 import Map from './pages/Map';
 import Finance from './pages/Finance';
+import Plaid from './pages/Plaid';
 import Nutrition from './pages/Nutrition';
 import { home, list, map, information, cash, nutrition } from 'ionicons/icons';
 
@@ -51,7 +52,7 @@ const appPages: AppPage[] = [
   },
   {
     title: 'Finances',
-    url: '/finance',
+    url: '/plaid',
     icon: cash
   },
   {
@@ -97,6 +98,7 @@ const App: React.FC = () => {
             <Route path="/map" component={Map} exact={true} />
             <Route path="/finance" component={Finance} exact={true} />
             <Route path="/nutrition" component={Nutrition} exact={true} />
+            <Route path="/plaid" component={Plaid} exact={true} />
 
             <Route exact path="/" render={() => <Redirect to="/home" />} />
           </IonRouterOutlet>

@@ -30,11 +30,11 @@ import { any } from 'prop-types';
 
 
 // const options = DogList.dogs.map((name) => {return {'value': name, 'label': name}})
+// clear local storage on first time in home
+// console.log('clear localStorage')
+// window.localStorage.clear();
 
 const HomePage: React.FC = () => {
-  // clear local storage on first launch
-  window.localStorage.clear();
-
   
   let options = DogList.dogs.map((name) => {return {'value': name, 'label': name}})
   let breed:any;
